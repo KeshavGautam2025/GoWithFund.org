@@ -2,55 +2,13 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Progress } from "@/components/ui/progress"
 import { Badge } from "@/components/ui/badge"
-import { Heart, Globe, Search, Upload, Github, Twitter, Linkedin, Facebook, Menu } from "lucide-react"
+import { Heart, Globe, Search, Upload, Github, Twitter, Linkedin, Facebook } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
 export default function GoWithFundLanding() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            {/* Logo */}
-            <div className="flex items-center">
-              <Heart className="h-8 w-8 text-blue-600 mr-2" />
-              <span className="text-xl font-bold text-gray-900">GoWithFund.org</span>
-            </div>
-
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-8">
-              <Link href="#" className="text-gray-700 hover:text-blue-600 font-medium">
-                Home
-              </Link>
-              <Link href="/about" className="text-gray-700 hover:text-blue-600 font-medium">
-                About Us
-              </Link>
-              <Link href="#" className="text-gray-700 hover:text-blue-600 font-medium">
-                Browse Projects
-              </Link>
-              <Link href="#" className="text-gray-700 hover:text-blue-600 font-medium">
-                For Nonprofits
-              </Link>
-              <Link href="#" className="text-gray-700 hover:text-blue-600 font-medium">
-                Contribute (Developers)
-              </Link>
-              <Link href="#" className="text-gray-700 hover:text-blue-600 font-medium">
-                Contact
-              </Link>
-            </div>
-
-            {/* CTA Button */}
-            <div className="flex items-center space-x-4">
-              <Button variant="ghost" size="icon" className="md:hidden">
-                <Menu className="h-6 w-6" />
-              </Button>
-            </div>
-          </div>
-        </div>
-      </nav>
-
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-50 to-teal-50 py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -321,74 +279,6 @@ export default function GoWithFundLanding() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
-            {/* Column 1 */}
-            <div className="space-y-4">
-              <div className="flex items-center">
-                <Heart className="h-8 w-8 text-blue-400 mr-2" />
-                <span className="text-xl font-bold">GoWithFund.org</span>
-              </div>
-              <p className="text-gray-300 leading-relaxed">
-                Organized exclusively for charitable and educational purposes. Connecting resources to global needs and
-                empowering positive change worldwide.
-              </p>
-            </div>
-
-            {/* Column 2 */}
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-              <div className="space-y-2">
-                <Link href="/about" className="block text-gray-300 hover:text-white transition-colors">
-                  About Us
-                </Link>
-                <Link href="#" className="block text-gray-300 hover:text-white transition-colors">
-                  Contact
-                </Link>
-                <Link href="#" className="block text-gray-300 hover:text-white transition-colors">
-                  FAQ
-                </Link>
-                <Link href="#" className="block text-gray-300 hover:text-white transition-colors">
-                  Privacy Policy
-                </Link>
-                <Link href="#" className="block text-gray-300 hover:text-white transition-colors">
-                  Terms of Service
-                </Link>
-              </div>
-            </div>
-
-            {/* Column 3 */}
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Connect With Us</h3>
-              <div className="space-y-2 mb-4">
-                <p className="text-gray-300">contact@gowithfund.org</p>
-              </div>
-              <div className="flex space-x-4">
-                <Link href="#" className="text-gray-300 hover:text-white transition-colors">
-                  <Twitter className="h-6 w-6" />
-                </Link>
-                <Link href="#" className="text-gray-300 hover:text-white transition-colors">
-                  <Linkedin className="h-6 w-6" />
-                </Link>
-                <Link href="#" className="text-gray-300 hover:text-white transition-colors">
-                  <Facebook className="h-6 w-6" />
-                </Link>
-                <Link href="#" className="text-gray-300 hover:text-white transition-colors">
-                  <Github className="h-6 w-6" />
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          {/* Bottom Bar */}
-          <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-            <p>&copy; {new Date().getFullYear()} GoWithFund Inc. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
     </div>
   )
 }
