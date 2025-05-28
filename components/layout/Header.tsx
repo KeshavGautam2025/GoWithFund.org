@@ -18,6 +18,9 @@ export default function Header() {
             <Link href="#" className="text-gray-700 hover:text-blue-600 font-medium">
               Home
             </Link>
+            <Link href="/contribute-as-a-developer" className="text-gray-700 hover:text-blue-600 font-medium">
+              Contribute as a Developer
+            </Link>
             <Link href="/about-us" className="text-gray-700 hover:text-blue-600 font-medium">
               About Us
             </Link>
@@ -26,9 +29,6 @@ export default function Header() {
             </Link>
             <Link href="#" className="text-gray-700 hover:text-blue-600 font-medium">
               For Nonprofits
-            </Link>
-            <Link href="#" className="text-gray-700 hover:text-blue-600 font-medium">
-              Contribute (Developers)
             </Link>
             <Link href="#" className="text-gray-700 hover:text-blue-600 font-medium">
               Contact
