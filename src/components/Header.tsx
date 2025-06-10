@@ -11,6 +11,7 @@ const Header = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const navLinks = [
+    { label: 'Home', href: '/' },
     { label: 'About', href: '/about' },
     { label: 'Blog', href: '/blog' },
     { label: 'Careers', href: '/careers' },
@@ -26,8 +27,8 @@ const Header = () => {
             <Image
                 src="/GoWithFund.org_Logo_Big_Size.png" 
                 alt="GoWithFund Logo" 
-                width={2000}
-                height={2000}
+                width={5000}
+                height={5000}
                 className="h-8 w-auto mr-2" />
         </Link>
 
