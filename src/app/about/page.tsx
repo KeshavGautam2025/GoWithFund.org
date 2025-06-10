@@ -1,3 +1,5 @@
+"use client"
+
 import {
   CalendarCheck,
   Globe,
@@ -11,8 +13,16 @@ import Image from "next/image";
 import React from "react";
 import { team } from "@/lib/team";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function About() {
+
+  const router = useRouter();
+
+  const handleStart = () => {
+    router.push("/volunteer");
+  };
+
   return (
     <div className="flex flex-1 justify-center ">
       <div className="flex flex-col flex-1">
@@ -187,7 +197,7 @@ export default function About() {
         </div>
 
         <div className="flex px-4 py-3 justify-center">
-          <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-5 bg-[var(--color-primary)] hover:bg-[var(--color-primary)]/80 text-[var(--color-dark)] text-base font-bold leading-normal tracking-[0.015em]">
+          <button onClick={handleStart} className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-5 bg-[var(--color-primary)] hover:bg-[var(--color-primary)]/80 text-[var(--color-dark)] text-base font-bold leading-normal tracking-[0.015em]">
             <span className="truncate">Get Started</span>
           </button>
         </div>

@@ -1,3 +1,5 @@
+"use client"
+
 import Link from "next/link";
 import {
   CalendarDays,
@@ -10,8 +12,19 @@ import {
   Users,
 } from "lucide-react";
 import { modules } from "@/lib/modules";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
+  
+  const handleNews = () => {
+    router.push("/newsletter");
+  };
+
+  const handleGit = () => {
+    router.push("https://github.com/GoWithFund-Org");
+  };
+
   return (
     <>
       {/* Hero Section */}
@@ -29,13 +42,13 @@ export default function Home() {
         </div>
 
         <div className="flex justify-center space-x-5 flex-wrap gap-y-3">
-          <Link href="/join-developer">
+          <Link href="/volunteer">
             <button className="bg-[var(--color-primary)] hover:bg-[var(--color-primary)]/50 text-white font-semibold px-5 py-2 rounded-md transition cursor-pointer">
               Join as Developer
             </button>
           </Link>
 
-          <Link href="/campaigns">
+          <Link href="/contact">
             <button className="bg-white text-[var(--color-primary)] hover:bg-gray-200/90 font-semibold px-5 py-2 rounded-md transition cursor-pointer">
               Explore Campaigns
             </button>
@@ -225,10 +238,10 @@ export default function Home() {
             Are you a developer, educator, nonprofit, or funder? Join us today.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4">
-            <button className="bg-[var(--color-dark)] text-white font-bold px-6 py-2 rounded-md hover:bg-opacity-90 hover:bg-[var(--color-dark)]/90 cursor-pointer transition">
+            <button onClick={handleNews} className="bg-[var(--color-dark)] text-white font-bold px-6 py-2 rounded-md hover:bg-opacity-90 hover:bg-[var(--color-dark)]/90 cursor-pointer transition">
               Join Our Newsletter
             </button>
-            <button className="bg-gray-200 text-[var(--color-dark)] border border-[var(--color-dark)] px-6 py-2 rounded-md font-bold hover:bg-gray-100 cursor-pointer transition">
+            <button onClick={handleGit} className="bg-gray-200 text-[var(--color-dark)] border border-[var(--color-dark)] px-6 py-2 rounded-md font-bold hover:bg-gray-100 cursor-pointer transition">
               Contribute on GitHub
             </button>
           </div>

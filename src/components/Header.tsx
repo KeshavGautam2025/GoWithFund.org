@@ -13,9 +13,9 @@ const Header = () => {
   const navLinks = [
     { label: 'Home', href: '/' },
     { label: 'About', href: '/about' },
-    { label: 'Blog', href: '/blog' },
+    // { label: 'Blog', href: '/blog' },
     { label: 'Careers', href: '/careers' },
-    { label: 'Press', href: '/press' },
+    // { label: 'Press', href: '/press' },
     { label: 'Contact', href: '/contact' },
   ];
 
@@ -39,7 +39,7 @@ const Header = () => {
               {link.label}
             </Link>
           ))}
-          <Link href="/join-us">
+          <Link href="/volunteer">
             <button className="bg-[var(--color-primary)] hover:bg-teal-800 text-white text-sm px-4 py-2 rounded-md">
               Join Us
             </button>
@@ -60,7 +60,7 @@ const Header = () => {
               {link.label}
             </Link>
           ))}
-          <Link href="/join-us" onClick={() => setIsOpen(false)}>
+          <Link href="/volunteer" onClick={() => setIsOpen(false)}>
             <button className="w-full bg-[var(--color-primary)] hover:bg-teal-800 text-white text-sm px-4 py-2 rounded-md">
               Join Us
             </button>
