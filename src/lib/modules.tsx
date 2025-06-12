@@ -1,10 +1,10 @@
-import { HandCoins, BriefcaseBusiness, Users, CodeXml, GraduationCap } from "lucide-react";
+import { Handshake, BriefcaseBusiness, Users, CodeXml, GraduationCap } from "lucide-react";
 
 export const modules = [
     {
         title: "Fundraising Platform",
         description: "AI-generated campaigns, fraud detection, multi-currency support.",
-        icon: HandCoins,
+        icon: Handshake,
     },
     {
         title: "GWF Jobs",

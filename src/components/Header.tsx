@@ -11,10 +11,11 @@ const Header = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const navLinks = [
+    { label: 'Home', href: '/' },
     { label: 'About', href: '/about' },
-    { label: 'Blog', href: '/blog' },
+    // { label: 'Blog', href: '/blog' },
     { label: 'Careers', href: '/careers' },
-    { label: 'Press', href: '/press' },
+    // { label: 'Press', href: '/press' },
     { label: 'Contact', href: '/contact' },
   ];
 
@@ -26,8 +27,8 @@ const Header = () => {
             <Image
                 src="/GoWithFund.org_Logo_Big_Size.png" 
                 alt="GoWithFund Logo" 
-                width={2000}
-                height={2000}
+                width={5000}
+                height={5000}
                 className="h-8 w-auto mr-2" />
         </Link>
 
@@ -38,7 +39,7 @@ const Header = () => {
               {link.label}
             </Link>
           ))}
-          <Link href="/join-us">
+          <Link href="/volunteer">
             <button className="bg-[var(--color-primary)] hover:bg-teal-800 text-white text-sm px-4 py-2 rounded-md">
               Join Us
             </button>
@@ -59,7 +60,7 @@ const Header = () => {
               {link.label}
             </Link>
           ))}
-          <Link href="/join-us" onClick={() => setIsOpen(false)}>
+          <Link href="/volunteer" onClick={() => setIsOpen(false)}>
             <button className="w-full bg-[var(--color-primary)] hover:bg-teal-800 text-white text-sm px-4 py-2 rounded-md">
               Join Us
             </button>
